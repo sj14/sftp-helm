@@ -1,0 +1,16 @@
+{{- range $i, $user := .Values.sftp.users }}
+{{- if $user.pubKeys }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "sftp-server.fullname" $ }}-auth-{{ $user.name }}
+  labels:
+    {{- include "sftp-server.labels" $ | nindent 4 }}
+data:
+  keys.pub: |
+    {{- range $j, $key := $user.pubKeys }}
+    {{ $key }}
+    {{- end }}
+{{- end }}
+{{- end }}

@@ -1,0 +1,33 @@
+sftp:
+  hostKeys:
+    ed25519: my_hostkey_ed25519
+    rsa: my_hostkey_rsa
+  users:
+    - name: demo
+      pass: y4mM/Hhem9GPc
+      passEncrypted: true
+      uid: ""
+      guid: ""
+      dirs:
+        - upload
+      pubKeys:
+        - testkey1demo
+        - testkey2demo
+    - name: traffic
+      pass: traffic
+      passEncrypted: false
+      uid: ""
+      guid: ""
+      dirs:
+        - data
+      pubKeys:
+        - testkey1traffic
+        - testkey2traffic
+
+extraContainers:
+  - name: nginx
+    image: nginx
+
+extraInitContainers:
+  - name: nginx-init
+    image: nginx

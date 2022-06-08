@@ -1,0 +1,7 @@
+---
+apiVersion: v2
+name: sftp-server
+description: A Helm chart for https://github.com/atmoz/sftp
+type: application
+version: 0.1.0
+sources: ["https://github.com/sj14/sftp-helm"]

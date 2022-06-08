@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  pull_request:
+    branches: ["**"]
+  push:
+    branches: ["**"]
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Perform Chart tests
+        run: |
+          make tests
+          git diff --exit-code
+  docs:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - uses: actions/setup-go@v3
+        with:
+          go-version: "1.18"
+      - name: Generate Docs
+        run: |
+          go install github.com/norwoodj/helm-docs/cmd/helm-docs@v1.10.0
+          make helm-docs
+          git diff --exit-code
