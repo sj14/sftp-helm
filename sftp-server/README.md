@@ -12,7 +12,7 @@ A Helm chart for https://github.com/atmoz/sftp
 
 ```console
 helm repo add sftp-helm https://sj14.github.io/sftp-helm
-helm upgrade --install sftp-helm/sftp-server --name=sftp
+helm upgrade sftp --install sftp-helm/sftp-server
 ```
 
 ## Values
