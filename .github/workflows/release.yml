@@ -23,13 +23,6 @@ jobs:
         uses: azure/setup-helm@v1
         with:
           version: v3.8.1
-      - name: Move files to satisfy chart-releaer
-        run: |
-          shopt -s extglob dotglob
-          mkdir sftp-server
-          mv !(sftp-server) sftp-server
-          mv sftp-server/.git .     # and move back (important)
-          mv sftp-server/.github .  # and move back (not important)
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.0
         with:

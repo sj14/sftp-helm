@@ -22,9 +22,5 @@
 *.tmproj
 .vscode/
 #############
-.github
 .helmignore
-Makefile
 README.md.gotmpl
-tests/
-scripts/

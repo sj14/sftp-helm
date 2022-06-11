@@ -9,5 +9,5 @@ cd "tests/values"
 
 for file in *yaml; do
 	echo "helm ${file}"
-	helm template ../../ -f "${file}" --include-crds --namespace test-namespace > "../outputs/${file}"
+	helm template ../../sftp-server/ -f "${file}" --include-crds --namespace test-namespace > "../outputs/${file}"
 done
