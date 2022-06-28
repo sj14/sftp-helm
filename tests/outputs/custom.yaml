@@ -155,7 +155,7 @@ spec:
           defaultMode: 0400
       - name: config-auth-demo
         configMap:
-          name: release-name-sftp-server-keys-demo
+          name: release-name-sftp-server-auth-demo
       - name: config-auth-traffic
         configMap:
-          name: release-name-sftp-server-keys-traffic
+          name: release-name-sftp-server-auth-traffic
