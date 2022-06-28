@@ -2,6 +2,17 @@ apiVersion: v1
 entries:
   sftp-server:
   - apiVersion: v2
+    created: "2022-06-28T13:45:59.704797074Z"
+    description: A Helm chart for https://github.com/atmoz/sftp
+    digest: df59ca4c192505269b2c70a6d9e68486d897de0f2aec78fc9569b47570a5d4ca
+    name: sftp-server
+    sources:
+    - https://github.com/sj14/sftp-helm
+    type: application
+    urls:
+    - https://github.com/sj14/sftp-helm/releases/download/sftp-server-0.1.2/sftp-server-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2022-06-12T10:34:49.070602267Z"
     description: A Helm chart for https://github.com/atmoz/sftp
     digest: d529b362693d9ac4fd01241dd0da7476bc45f9019aaac975f63f96215a6eaffd
@@ -23,4 +34,4 @@ entries:
     urls:
     - https://github.com/sj14/sftp-helm/releases/download/sftp-server-0.1.0/sftp-server-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-12T10:34:49.070619167Z"
+generated: "2022-06-28T13:45:59.704816474Z"
