@@ -93,7 +93,7 @@ spec:
       {{- if $user.pubKeys }}
       - name: config-auth-{{ $user.name }}
         configMap:
-          name: {{ include "sftp-server.fullname" $ }}-keys-{{ $user.name }}
+          name: {{ include "sftp-server.fullname" $ }}-auth-{{ $user.name }}
       {{- end }}
       {{- end }}
       {{- if .Values.persistentVolume.enabled }}
